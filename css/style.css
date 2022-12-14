@@ -32,6 +32,17 @@ input {
     margin: 100px auto;
 }
 
+ul {
+    text-align: left;
+    padding-top: 10px;
+    list-style-type: none;
+}
+
+ul li {
+    padding: 15px 10px 2px 2px;
+    border-bottom: 1px solid lightgray;
+}
+
 button {
     background: rgb(60, 60, 60);
     color: white;

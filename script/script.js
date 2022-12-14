@@ -4,8 +4,22 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            // test per controllare che la lista funzioni
-            toDoList: ['casa', 'cosa'],
+            toDoList: [{
+                name: "Zucchine",
+                done: false,
+            },
+            {
+                name: "Patate",
+                done: false,
+            },
+            {
+                name: "Pasta",
+                done: false,
+            },
+            {
+                name: "Nutella",
+                done: false,
+            }],
         }
     }
 }).mount('#app')
