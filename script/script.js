@@ -23,14 +23,12 @@ createApp({
                 text: "Nutella",
                 done: false,
             }],
-
-            // methods
-            methods: {
-                addItem(item) {
-                    this.toDoList.push({ text: item, done: false });
-                }
-            }
-
+        }
+    },
+    // methods fratello di data
+    methods: {
+        addItem() {
+            this.toDoList.push({ text: this.inputToDo, done: false });
         }
     }
 }).mount('#app')

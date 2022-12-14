@@ -17,7 +17,7 @@
         <div class="container">
             <h1>ToDoList</h1>
             <input type="text" class="input-list" v-model="inputToDo">
-            <button class="add" @click="addItem(inputToDo)">Add</button>
+            <button class="add" @click="addItem()">Add</button>
             <ul class="list">
                 <li v-for="element in toDoList">
                     {{element.text}}
