@@ -4,22 +4,33 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            // input utente
+            inputToDo: "",
+            // array di oggetti
             toDoList: [{
-                name: "Zucchine",
+                text: "Zucchine",
                 done: false,
             },
             {
-                name: "Patate",
+                text: "Patate",
                 done: false,
             },
             {
-                name: "Pasta",
+                text: "Pasta",
                 done: false,
             },
             {
-                name: "Nutella",
+                text: "Nutella",
                 done: false,
             }],
+
+            // methods
+            methods: {
+                addItem(item) {
+                    this.toDoList.push({ text: item, done: false });
+                }
+            }
+
         }
     }
 }).mount('#app')
