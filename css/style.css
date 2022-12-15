@@ -23,7 +23,6 @@ input {
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .container {
@@ -36,17 +35,51 @@ ul {
     text-align: left;
     padding-top: 10px;
     list-style-type: none;
+
 }
 
 ul li {
+    display: flex;
+    justify-content: space-between;
     padding: 15px 10px 2px 2px;
     border-bottom: 1px solid lightgray;
+}
+
+#user-input {
+    margin-bottom: 3px;;
+    display: flex;
+    gap: 10px;
 }
 
 button {
     background: rgb(60, 60, 60);
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+}
+
+.error {
+    font-weight: 500;
+    font-size: .9rem;
+    color: red;
+}
+
+.empty {
+    font-weight: 500;
+    font-size: .9rem;
+    color: green;
+}
+
+.capitalize::first-letter {
+    text-transform: capitalize;
+}
+
+.active {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.wrapper {
+    height: 60px;
 }

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -16,11 +17,21 @@
         
         <div class="container">
             <h1>ToDoList</h1>
-            <input type="text" class="input-list" v-model="inputToDo">
-            <button class="add" @click="addItem()">Add</button>
+            <div class="wrapper">
+
+                <div id="user-input">
+                    <input type="text" class="input-list" v-model="inputToDo" @keyup.enter="addItem(inputToDo)">
+                    <button class="add" @click="addItem(inputToDo)">Add</button>
+                </div>
+                <div class="error-messages">
+                    <p class="error capitalize">{{errorMess}}</p>
+                    <p class="empty capitalize">{{emptyMess}}</p>
+                </div>
+            </div>
             <ul class="list">
-                <li v-for="element in toDoList">
-                    {{element.text}}
+                <li class="capitalize" v-for="element in toDoList">
+                <span :class="{ active: element.done }" @click="element.done = !element.done">{{element.text}}</span>
+                <i @click="removeEl(element)" class="fa-regular fa-trash-can"></i>
                 </li>
             </ul>
         </div>
