@@ -16,7 +16,7 @@
     <div id="app">
         
         <div class="container">
-            <h1>ToDoList</h1>
+            <h1 class="">ToDo List</h1>
             <div class="wrapper">
 
                 <div id="user-input">
@@ -29,8 +29,8 @@
                 </div>
             </div>
             <ul class="list">
-                <li class="capitalize no-select" v-for="element in toDoList">
-                <span :class="{ active: element.done }" @click="element.done = !element.done">{{element.text}}</span>
+                <li class="no-select" v-for="element in toDoList">
+                <span class="capitalize" :class="{ active: element.done }" @click="element.done = !element.done">{{element.text}}</span>
                 <i @click="removeEl(element)" class="fa-regular fa-trash-can"></i>
                 </li>
             </ul>
