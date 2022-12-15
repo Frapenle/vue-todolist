@@ -29,7 +29,7 @@
                 </div>
             </div>
             <ul class="list">
-                <li class="capitalize" v-for="element in toDoList">
+                <li class="capitalize no-select" v-for="element in toDoList">
                 <span :class="{ active: element.done }" @click="element.done = !element.done">{{element.text}}</span>
                 <i @click="removeEl(element)" class="fa-regular fa-trash-can"></i>
                 </li>
